@@ -1,0 +1,10 @@
+#!/usr/bin/env bats
+
+# local version: 1.1.0.0
+
+@test "Say Hi!" {
+  run bash hello_world.sh
+
+  (( status == 0 ))
+  [[ $output == "Hello, World!" ]]
+}
